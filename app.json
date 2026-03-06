@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "ReceiptVault",
+    "slug": "receiptvault",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "receiptvault",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#22c55e",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.receiptvault.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ReceiptVault needs camera access to scan receipts.",
+        "NSPhotoLibraryUsageDescription": "ReceiptVault needs photo library access to select receipt images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#22c55e"
+      },
+      "package": "com.receiptvault.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ReceiptVault needs camera access to scan receipts."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ReceiptVault needs photo library access to select receipt images."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#22c55e"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
